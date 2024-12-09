@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legion Payroll Process</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Legion Payroll Process</h1>
+    <form id="payroll-form">
+      <label for="pay-group">Pay Group:</label>
+      <select id="pay-group" name="payGroup">
+        <option value="FEL">FEL</option>
+        <option value="K3T">K3T</option>
+        <option value="K3V">K3V</option>
+        <option value="K3W">K3W</option>
+        <!-- Add other pay group options here -->
+      </select>
+
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="startDate">
+
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="endDate">
+
+      <button type="button" id="call-webhook">Call Webhook</button>
+    </form>
+    <div class="response">
+  <h3>Generated Webhook URL</h3>
+  <div id="webhook-url">No URL generated yet</div>
+
+  <h3>Response</h3>
+  <div id="response-text">No response yet</div>
+</div>
+    
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
